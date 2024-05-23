@@ -26,7 +26,6 @@ print(bostonData.describe())
 
 
 ##### PROJECT - BOSTON DATASET (Kaggle bookmarked)
-
 """
     TASKS:
     Is there a significant difference in the median value of houses
@@ -44,11 +43,16 @@ print(bostonData.describe())
     (DIS ~ MEDV)
 """
 
+
 #A general OLS regression fitting all variables
 def generalReg():
     pass
 
 
+
+"""
+Q1) CHAS ~ MEDV
+"""
 #An OLS regression fitting CHAS (river dummy variable)
 def medvRiverReg():
     #Set up variables and add intercept property
@@ -109,13 +113,56 @@ def medvRiverTTest():
 
 
 
+"""
+Q2) AGE ~ MEDV
+"""
+def medvAgePearsonR():
+    #First lets see it visually via scatter plot
+    plt.scatter("AGE", "MEDV", data = bostonData)
+    plt.show()
+    
+    #Pearson R
+    rValue, pValue = scipy.stats.pearsonr(bostonData["AGE"], bostonData["MEDV"])
+    print("R-Coeffecient: {0},   P-value: {1}".format(rValue, pValue))
+
+
+
+"""
+Q3) INDUS ~ NOX
+"""
+def noxIndusPearsonR():
+    #First lets see it visually via scatter plot
+    plt.scatter("NOX", "INDUS", data = bostonData)
+    plt.show()
+    
+    #Pearson R
+    rValue, pValue = scipy.stats.pearsonr(bostonData["NOX"], bostonData["INDUS"])
+    print("R-Coeffecient: {0},   P-value: {1}".format(rValue, pValue))
+
+
+
+"""
+Q4) DIS ~ MEDV
+"""
+def medvDisPearsonR():
+    #First lets see it visually via scatter plot
+    plt.scatter("DIS", "MEDV", data = bostonData)
+    plt.show()
+    
+    #Pearson R
+    rValue, pValue = scipy.stats.pearsonr(bostonData["DIS"], bostonData["MEDV"])
+    print("R-Coeffecient: {0},   P-value: {1}".format(rValue, pValue))
+
+
+
 
 
 ##### MAIN MENU
 
 ### Visualisations index
 plotFunctions = {1: generalReg, 2: medvRiverReg, 3: medvRiverVis,
-                 4: medvRiverTTest}
+                 4: medvRiverTTest, 5: medvAgePearsonR, 6: noxIndusPearsonR,
+                 7: medvDisPearsonR}
 
 ### Menu
 menuChoice = ""
