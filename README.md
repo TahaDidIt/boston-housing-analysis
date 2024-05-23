@@ -5,7 +5,7 @@ The task questions can be found below, or in the Python script. It largely conce
 
 # Task
 
-- Is there a significant difference in the median value of houses bounded by the Charles river or not? (CHAS ~ MEDV) [DONE]
+- Is there a significant difference in the median value of houses bounded by the Charles river or not? (CHAS ~ MEDV)
 - Is there a difference in median values of houses of each proportion of owner-occupied units built before 1940? (AGE ~ MEDV)
 - Can we conclude that there is no relationship between Nitric oxide concentrations and the proportion of non-retail business acres per town? (INDUS ~ NOX)
 - What is the impact of an additional weighted distance to the five Boston employment centres on the median value of owner-occupied homes? (DIS ~ MEDV)
