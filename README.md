@@ -3,6 +3,10 @@ This is an analysis of the Boston housing dataset originally published in Harris
 
 The task questions can be found below, or in the Python script. It largely concerns statistical tests for correlation and the analysis is backed by distribution/scatterplot visualisations that can be found in the Tableau file.
 
+**Tools used:
+- Python; scipy, matplotlib, seaborn, pandas, statmodels.api
+- Tableau**
+
 # Task
 
 - Is there a significant difference in the median value of houses bounded by the Charles river or not? (CHAS ~ MEDV)
